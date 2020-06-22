@@ -135,9 +135,9 @@ Function Invoke-JITVMAccess {
     Start-AzJitNetworkAccessPolicy -ResourceId "/subscriptions/$SubID/resourceGroups/$($VMInfo.ResourceGroupName)/providers/Microsoft.Security/locations/$($VMInfo.Location)/jitNetworkAccessPolicies/default" -VirtualMachine $JitPolicyArr | Out-Null
 }
 
-#! Check PowerShell Package Management Module
+#! Check PowerShell PackageManagement Module
 Try {
-    Import-Module -Name PackageManagement -RequiredVersion 1.1.7.2 -ErrorAction Stop -Verbose:$false | Out-Null
+    Import-Module -Name PackageManagement -RequiredVersion 1.4.7 -ErrorAction Stop -Verbose:$false | Out-Null
     Write-Verbose "Importing PowerShell PackageManagement Module..."
 }
 Catch {
@@ -168,7 +168,7 @@ Catch {
     Install-Az
 }
 
-#! Check Azure Security PowerShell Module
+#! Check Az.Security PowerShell Module
 Try {
     Import-Module -Name Az.Security -ErrorAction Stop -Verbose:$false | Out-Null
     Write-Verbose "Importing Az Security PowerShell Module..."
