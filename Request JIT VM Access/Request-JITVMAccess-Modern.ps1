@@ -205,7 +205,7 @@ If (!$VMInfo) {
     Break
 }
 
-$VMAccessPolicy = (Get-AzJitNetworkAccessPolicy).VirtualMachines | Where-Object {$_.Id -like "*$VMName*"} | Select -ExpandProperty Ports
+$VMAccessPolicy = (Get-AzJitNetworkAccessPolicy).VirtualMachines | Where-Object {$_.Id -like "*$VMName*"} | Select-Object -ExpandProperty Ports
 
 If (!$AddressPrefix) {
     $AddressPrefix = Invoke-RestMethod 'http://ipinfo.io/json' -Verbose:$false | Select-Object -ExpandProperty IP
