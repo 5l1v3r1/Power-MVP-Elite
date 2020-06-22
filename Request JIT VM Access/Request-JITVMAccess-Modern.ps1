@@ -15,7 +15,7 @@ Requires  : PowerShell Version 5.1 or later
 Module    : Az Version 3.7.0 or later
 Module    : Az.Security Version 0.7.7
 Module    : PowerShellGet Version 1.6.7 or later
-Module    : PowerShell PackageManagement Version 1.1.7.2 or later
+Module    : PowerShell PackageManagement Version 1.4.7 or later
 
 .LINK
 To provide feedback or for further assistance please visit:
